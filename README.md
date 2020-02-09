@@ -1,30 +1,32 @@
 # Toxic Comment Classifier
 
-## Motivation
-Specialized in children’s literature, I’ve always been curious how words influence children’s perception of the world. In the digital era, children get access not only to literature work but also to online comments and articles, which can contain toxic conversations. They might suffer from cyber-bullying and consequent negative influence. The large volume of online comments makes it hard for humans to thoroughly monitor and guard children’s well beings. Natural language processing can effectively tackle the problems by recognizing and reporting the harmful contents.
+## Objectives:
+Toxic comment classifier is a natural language processing application that allows online platforms to detect the toxicity of a message based on its textual context, with the long term goal to improve  the quality of online conversation. The project answers below questions:
+* What’s the probability of each type of toxicity (toxic, severe toxic, obscene, threat, insult, identity hate) for each comment?
+* Which words/phrases frequently seen in toxic messages are key to the future prediction?
+* When do models make mistakes? If taking the cost of misclassification into account, what are tolerable mistakes and how should models adapt to it? 
 
-## Objectives
-With the goal to reduce cyber-bullying due to hate speech, the project aims to apply machine learning and natural language processing to predict whether a comment contains hate message and what types of attack it should be assigned to. 
 
-## Dataset Description
-The dataset covers 160K comments from English Wikipedia Talk Pages, dating from 2004 to 2015. Each comment is manually labeled with one or more toxic types, including toxic, severe toxic, obscene, threat, insult, identity hate. 
+## Data Source:
+The training data covers 160K comments from English Wikipedia talk page edits, dating from 2004 to 2015. Each comment is manually labeled with one or more toxic types, including toxic, severe toxic, obscene, threat, insult, identity hate.
+
 
 ## Project Structure
 
 ###### Text Preprocessing
-###### Feature Vector Extraction (not consider the semantic relationship):
+###### Feature Vector Extraction:
 * Bag-of-Words representation
 * N-grams
-* Tf-idf model
+* Tf-idf vectorization
 
-###### Machine Learning Solutions(Multi-label classification models):
+###### Machine Learning Solutions(Multi-label classification):
 * logistic regression
 * naive bayes
 * SVM 
 * decision tree
 * ensemble model: random forest
 
-###### Evaluation:
+###### Key Evaluation Metrics:
 ROC and AUC
 
 ###### *Other Possible Solutions:
